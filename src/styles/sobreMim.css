@@ -1,0 +1,36 @@
+#sobreMim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64.222px);
+}
+
+#sobreMim .container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* align-items: center; */
+}
+
+#sobreMim .title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 815px) {
+  #sobreMim .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #sobreMim .container {
+    gap: 20px;
+    width: 100%;
+  }
+  #sobreMim .description {
+    font-size: 0.6rem;
+  }
+}

@@ -1,6 +1,7 @@
 #home {
   display: flex;
-  min-height: calc(100vh - 44.222px - 20px);
+  min-height: calc(100vh - 64.222px);
+  padding: 28px 8%;
 }
 
 #cta {
@@ -30,6 +31,10 @@
   color: var(--cor-fonte);
 }
 
+#cta .buttons-info {
+  margin-top: 50px;
+}
+
 #banner {
   display: flex;
   align-items: start;
@@ -54,6 +59,10 @@
 
   #banner {
     display: none;
+  }
+
+  #cta .buttons-info {
+    margin-top: 0px;
   }
 
   #cta {
@@ -86,9 +95,5 @@
 
   #cta .description {
     font-size: 0.6rem;
-  }
-
-  #cta .description-info {
-    font-size: 0.9rem;
   }
 }

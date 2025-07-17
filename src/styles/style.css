@@ -35,7 +35,7 @@ body {
 }
 
 section {
-  padding: 28px 8%;
+  padding: 28px 10%;
 }
 
 p,
@@ -113,5 +113,13 @@ h3 {
     & i {
       font-size: 1.5rem;
     }
+  }
+
+  .nome-sessao {
+    font-size: 1rem;
+  }
+
+  .titulo-sessao {
+    font-size: 1.5rem;
   }
 }

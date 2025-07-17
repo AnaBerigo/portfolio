@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     sections.each(function (index) {
       const section = $(this);
-      const sectionTop = section.offset().top - 500;
+      const sectionTop = section.offset().top - 68;
       const sectionBottom = sectionTop + section.outerHeight();
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
