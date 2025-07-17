@@ -1,0 +1,94 @@
+#home {
+  display: flex;
+  min-height: calc(100vh - 44.222px - 20px);
+}
+
+#cta {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 5%;
+}
+
+#cta .title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--cor-fonte);
+}
+
+#cta .title span {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--roxo-principal);
+}
+
+#cta .description {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  color: var(--cor-fonte);
+}
+
+#banner {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  width: 50%;
+}
+
+#banner img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+}
+
+@media screen and (max-width: 1550px) {
+  #home {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #banner {
+    display: none;
+  }
+
+  #cta {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #cta .title {
+    font-size: 2rem;
+  }
+
+  #cta .title span {
+    font-size: 2.5rem;
+  }
+
+  #cta .description {
+    font-size: 0.6rem;
+  }
+
+  #cta .description-info {
+    font-size: 0.9rem;
+  }
+}
