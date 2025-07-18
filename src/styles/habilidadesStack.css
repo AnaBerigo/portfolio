@@ -7,15 +7,20 @@
 }
 
 #habilidadesStack .container {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
+#habilidadesStack .container .buttons-info {
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 815px) {
   #habilidadesStack .container {
-    width: 80%;
+    width: 100%;
   }
 }
 
