@@ -60,3 +60,8 @@ $(document).ready(function () {
     $("#mobile_btn").find("i").removeClass("fa-x");
   });
 });
+
+VanillaTilt.init(document.querySelector(".card"), {
+  max: 50,
+  speed: 500,
+});
