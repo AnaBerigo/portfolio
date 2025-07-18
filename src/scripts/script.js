@@ -15,8 +15,6 @@ $(document).ready(function () {
 
     let activeSectionIndex = 0;
 
-    console.log("scrollPosition", scrollPosition);
-
     if (scrollPosition <= -64) {
       header.css("box-shadow", "none");
     } else {
@@ -25,7 +23,7 @@ $(document).ready(function () {
 
     sections.each(function (index) {
       const section = $(this);
-      const sectionTop = section.offset().top - 68;
+      const sectionTop = section.offset().top - 150;
       const sectionBottom = sectionTop + section.outerHeight();
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
