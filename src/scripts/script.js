@@ -62,6 +62,6 @@ $(document).ready(function () {
 });
 
 VanillaTilt.init(document.querySelector(".card"), {
-  max: 50,
-  speed: 500,
+  max: 25,
+  speed: 400,
 });
