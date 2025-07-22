@@ -11,8 +11,175 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-bottom: 20px;
 }
 
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff5b;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  width: 20rem;
+  gap: 20px;
+
+  & .image-card {
+    display: flex;
+    overflow: hidden;
+    height: 10rem;
+
+    & img {
+      margin-top: 08px;
+      width: 100%;
+      height: 120%; /* altura maior que o container para "sobrar" imagem escondida */
+      object-fit: cover;
+      object-position: top; /* sempre mostrar o topo */
+      transition: transform 0.3s ease;
+    }
+  }
+
+  & h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-fonte);
+  }
+
+  & p {
+    font-size: 0.7rem;
+    color: var(--cor-fonte);
+  }
+
+  & .languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: var(--roxo-principal);
+
+      & i {
+        font-size: 0.8rem;
+      }
+
+      & svg {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+
+      & p {
+        font-size: 0.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  & .visitar {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    justify-content: end;
+
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: var(--cor-fonte);
+      transition: color 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg);
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      & p {
+        font-weight: 700;
+        font-size: 0.8rem;
+        transition: color 0.3s ease;
+      }
+
+      & i {
+        font-size: 0.6rem;
+      }
+
+      &:hover {
+        color: var(--roxo-principal);
+        & p {
+          color: var(--roxo-principal);
+        }
+      }
+    }
+  }
+}
+
+.card:hover .visitar a::before {
+  animation: brilho 3s ease-in-out 0s infinite;
+  opacity: 1;
+}
+
+.card:hover .image-card img {
+  animation: floatImage 2s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes brilho {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #projetos .container {
+    gap: 20px;
+    width: 100%;
+  }
+  #projetos .description {
+    font-size: 0.85rem;
+  }
+}
+
+/* 
 .container-cards {
   margin-top: 20px;
   background-color: var(--cor-branco);
@@ -41,7 +208,6 @@
 
 .container-cards .imagem-card {
   padding: 2% 1% 0 0;
-  /* width: 50%; */
 }
 
 .container-cards .conteudo-card {
@@ -65,7 +231,7 @@
     font-size: 1.25rem;
     color: var(--cor-fonte);
   }
-}
+} */
 
 /* @media (max-width: 768px) {
   .popup-content {
