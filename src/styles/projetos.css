@@ -13,70 +13,17 @@
   gap: 50px;
 }
 
-#projetos .card {
-  background: linear-gradient(
-    25deg,
-    var(--roxo-principal) 0%,
-    var(--roxo-medio) 64.74%
-  );
-}
-
-.popup.hidden {
-  display: none;
-}
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-}
-
-.popup-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100vw;
-  height: 100vh;
-}
-
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--cor-branco);
-  border-radius: 10px;
-  width: 90vw;
-  height: 90vh;
-  display: flex;
-  z-index: 1001;
-}
-
-.close-popup {
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 2rem;
-  color: var(--cor-fonte);
-  z-index: 1000;
-  background-color: transparent;
-  border: none;
-}
-
-/* #projetos #popup-content {
+.container-cards {
+  margin-top: 20px;
   background-color: var(--cor-branco);
   border-radius: 10px;
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
   display: flex;
   position: relative;
-  width: 90%;
   gap: 50px;
-} */
+}
 
-.popup-content .detalhe {
+.container-cards .detalhe {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,19 +31,20 @@
   z-index: 1;
 }
 
-.popup-content .conteudo-card,
-.popup-content .imagem-card {
+.container-cards .conteudo-card,
+.container-cards .imagem-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
 }
 
-.popup-content .imagem-card {
+.container-cards .imagem-card {
   padding: 2% 1% 0 0;
+  /* width: 50%; */
 }
 
-.popup-content .conteudo-card {
+.container-cards .conteudo-card {
   padding: 2%;
 
   & img {
@@ -104,26 +52,26 @@
   }
 
   & h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--cor-fonte);
   }
 
   & h2 span {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #eb0029;
   }
 
   & p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--cor-fonte);
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .popup-content {
     width: 95%;
     height: auto;
     max-height: 90vh;
     padding: 1.5rem;
   }
-}
+} */

@@ -60,21 +60,3 @@ $(document).ready(function () {
     $("#mobile_btn").find("i").removeClass("fa-x");
   });
 });
-
-VanillaTilt.init(document.querySelector(".card"), {
-  max: 25,
-  speed: 400,
-});
-
-$(document).ready(function () {
-  $(".open-popup").on("click", function () {
-    const targetId = $(this).data("target");
-    $("#" + targetId).removeClass("hidden");
-    $("body").css("overflow", "hidden"); // evita scroll no fundo
-  });
-
-  $(".close-popup, .popup-overlay").on("click", function () {
-    $(this).closest(".popup").addClass("hidden");
-    $("body").css("overflow", "auto");
-  });
-});
