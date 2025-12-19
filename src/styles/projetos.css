@@ -20,6 +20,7 @@
   justify-content: center;
   gap: 20px;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -141,6 +142,11 @@
   }
 }
 
+.disable {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 .card:hover .visitar a::before {
   animation: brilho 3s ease-in-out 0s infinite;
   opacity: 1;
@@ -179,7 +185,54 @@
   }
 }
 
-/* 
+/* garante que o "banner" fique preso dentro do card */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* (opcional) eu recomendo tirar o opacity do .disable,
+   porque opacity no pai deixa a faixa "cinza". Use um overlay pra “apagar” o card */
+.disable {
+  pointer-events: none;
+  opacity: 1; /* <- troque seu 0.6 por 1 */
+}
+
+/* escurece/desbota o conteúdo do card quando estiver desabilitado */
+.card.disable::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 2;
+}
+
+/* faixa branca no meio com texto */
+.card.disable::after {
+  content: "🛠️⚙️ EM MANUTENÇÃO ⚙️🛠️";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  width: 130%;
+  padding: 0.65rem 0;
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+/* garante que o conteúdo do card fique abaixo do overlay/faixa */
+.card.disable > * {
+  position: relative;
+  z-index: 1;
+}
+
+/*
 .container-cards {
   margin-top: 20px;
   background-color: var(--cor-branco);
