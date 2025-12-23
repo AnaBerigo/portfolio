@@ -193,13 +193,15 @@
 
 /* (opcional) eu recomendo tirar o opacity do .disable,
    porque opacity no pai deixa a faixa "cinza". Use um overlay pra “apagar” o card */
-.disable {
+.disable,
+.desenv {
   pointer-events: none;
   opacity: 1; /* <- troque seu 0.6 por 1 */
 }
 
 /* escurece/desbota o conteúdo do card quando estiver desabilitado */
-.card.disable::before {
+.card.disable::before,
+.card.desenv::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -208,8 +210,8 @@
 }
 
 /* faixa branca no meio com texto */
-.card.disable::after {
-  content: "🛠️⚙️ EM MANUTENÇÃO ⚙️🛠️";
+.card.disable::after,
+.card.desenv::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -226,71 +228,17 @@
   z-index: 3;
 }
 
+.card.disable::after {
+  content: "🛠️⚙️ EM MANUTENÇÃO ⚙️🛠️";
+}
+
+.card.desenv::after {
+  content: "🚧 EM DESENVOLVIMENTO 🚧";
+}
+
 /* garante que o conteúdo do card fique abaixo do overlay/faixa */
-.card.disable > * {
+.card.disable > *,
+.card.desenv > * {
   position: relative;
   z-index: 1;
 }
-
-/*
-.container-cards {
-  margin-top: 20px;
-  background-color: var(--cor-branco);
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.15);
-  display: flex;
-  position: relative;
-  gap: 50px;
-}
-
-.container-cards .detalhe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 90%;
-  z-index: 1;
-}
-
-.container-cards .conteudo-card,
-.container-cards .imagem-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 2;
-}
-
-.container-cards .imagem-card {
-  padding: 2% 1% 0 0;
-}
-
-.container-cards .conteudo-card {
-  padding: 2%;
-
-  & img {
-    width: 8rem;
-  }
-
-  & h2 {
-    font-size: 5rem;
-    color: var(--cor-fonte);
-  }
-
-  & h2 span {
-    font-size: 5rem;
-    color: #eb0029;
-  }
-
-  & p {
-    font-size: 1.25rem;
-    color: var(--cor-fonte);
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .popup-content {
-    width: 95%;
-    height: auto;
-    max-height: 90vh;
-    padding: 1.5rem;
-  }
-} */
