@@ -2,6 +2,8 @@
 
 Este projeto é um portfólio pessoal desenvolvido para apresentar minhas **habilidades**, **experiências** e **projetos** de forma organizada, visualmente agradável e profissional. Ideal para recrutadores, parceiros e colegas de área que queiram conhecer mais sobre meu trabalho.
 
+https://www.figma.com/design/OP3jP1eTmhxVoD7oyVsRp3/Portfolio?node-id=1-4&t=cAXxndTxOtkoKmHK-0
+
 ---
 
 ## 📌 Objetivos
