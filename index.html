@@ -1,352 +1,853 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/style.css" />
-    <link rel="icon" href="./src/assets/images/favicon.svg" type="image/svg+xml">
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
-    />
-    <script src="https://unpkg.com/scrollreveal"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <meta
+    name="description"
+    content="Ana Paula Berigo, desenvolvedora Front-end com experiência em Angular, React e TypeScript. Conheça meus projetos e minha trajetória."
+  >
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta name="theme-color" content="#faf9fc">
+  <meta property="og:title" content="Ana Berigo — Desenvolvedora Front-end">
+  <meta
+    property="og:description"
+    content="Código preciso. Olhar criativo. Projetos e trajetória de Ana Paula Berigo."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
-    <title>Portifólio Berigo</title>
+  <link
+    rel="icon"
+    href="src/assets/images/favicon.svg"
+    type="image/svg+xml"
+  >
+  <link rel="stylesheet" href="src/styles/style.css">
+
+  <script src="src/scripts/theme.js"></script>
+  <script src="src/scripts/script.js" defer></script>
+
+  <title>Ana Berigo - Desenvolvedora Front-end</title>
 </head>
+
 <body>
-    <img src="src/assets/images/imagem-bg.svg" id="bg" alt="Imagem de fundo do portfólio com formas geométricas em tons de roxo e rosa" />
-    <header>
-        <nav id="navbar">
-            <a href="#home">
-                <img src="src/assets/images//logo.svg" alt="Logo do Portfólio com as letras A e B e no meio um ícone de &#10094; / &#10095;" id="nav_logo">
-            </a>
-            <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#sobreMim">Sobre mim</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#habilidadesStack">Habilidades / Stack</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projetos">Projetos</a>
-                </li>
-            </ul>
+  <a class="skip-link" href="#main-content">
+    Pular para o conteúdo
+  </a>
 
-            <div></div>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a
+        class="wordmark"
+        href="#home"
+        aria-label="Ana Berigo, início"
+      >
+        ana berigo<span aria-hidden="true">.</span>
+      </a>
 
-            <button aria-label="Abrir menu mobile" id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
+      <nav
+        id="main-nav"
+        class="main-nav"
+        aria-label="Navegação principal"
+      >
+        <a href="#sobreMim">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-        <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#sobreMim">Sobre mim</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#habilidadesStack">Habilidades / Stack</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projetos">Projetos</a>
-                </li>
-            </ul>
+      <div class="header-actions">
+        <button
+          class="theme-toggle icon-button"
+          type="button"
+          aria-label="Ativar tema escuro"
+          aria-pressed="false"
+          hidden
+        >
+          <svg
+            class="moon-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.4 14A8.6 8.6 0 0 1 10 3.6 8.7 8.7 0 1 0 20.4 14Z"
+            />
+          </svg>
+
+          <svg
+            class="sun-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            />
+          </svg>
+        </button>
+
+        <a
+          class="header-contact"
+          href="mailto:anaberigoo@gmail.com"
+        >
+          Vamos conversar
+        </a>
+
+        <button
+          class="menu-toggle icon-button"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          hidden
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Apresentação -->
+    <section
+      id="home"
+      class="hero wrap"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="short-rule" aria-hidden="true"></span>
+          Ana Paula Berigo · Front-end
+        </p>
+
+        <h1 id="hero-title">
+          Código preciso.<br>
+          Olhar <em>criativo.</em>
+        </h1>
+
+        <p class="hero-description">
+          Transformo ideias em interfaces claras e funcionais,
+          com atenção ao design e às pessoas que vão usá-las.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">
+            Conheça meus projetos
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="src/assets/files/Ana_Paula_Berigo_CV.pdf"
+            download="Ana_Paula_Berigo_CV.pdf"
+          >
+            Baixar currículo
+            <span class="file-format">PDF</span>
+          </a>
         </div>
-    </header>
-    <main>
-        <section id="home">
-            <div id="cta">
 
-                <div>
-                    <h1 class="title">
-                        Transforme suas ideias em realidade digital com <span>um Front-end de excelência!</span>
-                    </h1>
-                    <p class="description">
-                        Sou a Ana Paula Berigo, desenvolvedora Front-End com foco em interfaces acessíveis e responsivas.
-                    </p>
-                    <p class="description">
-                        Minha missão é criar experiências digitais que encantem os usuários e atendam às suas necessidades. Vamos juntos transformar suas ideias em realidade digital?
-                    </p>
-                </div>
+        <div
+          class="hero-expertise"
+          aria-label="Áreas de atuação"
+        >
+          <span>Angular & React</span>
+          <span>Web & Mobile</span>
+          <span>UX/UI</span>
+        </div>
+      </div>
 
-                <div class="buttons-info">
-                    <a href="https://www.linkedin.com/in/anaberigo/" target="_blank" rel="noopener" aria-label="Abrir LinkedIn de Ana Berigo">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/AnaBerigo" target="_blank" rel="noopener" aria-label="Abrir github de Ana Berigo">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://wa.me/+5516981316789" target="_blank" rel="noopener" aria-label="Abrir WhatsApp de Ana Berigo">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:anaberigoo@gmail.com" target="_blank" rel="noopener" aria-label="Abrir e-mail de Ana Berigo">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="./src/assets/files/Currículo Ana Berigo e Silva.pdf" target="_blank" rel="noopener" aria-label="Abrir currículo de Ana Berigo">
-                        <i class="fa-solid fa-file"></i>
-                    </a>
-                </div>
+      <div class="hero-visual">
+        <div class="portrait-orbit" aria-hidden="true"></div>
+        <div class="portrait-cross" aria-hidden="true">+</div>
+
+        <figure class="portrait">
+          <img
+            src="src/assets/images/anaberigo.png"
+            alt="Ana Paula Berigo"
+            width="960"
+            height="1280"
+            fetchpriority="high"
+          >
+
+          <figcaption>
+            <span>Ana Berigo</span>
+            <span>Desenvolvedora Front-end</span>
+          </figcaption>
+        </figure>
+
+        <span class="portrait-side-note" aria-hidden="true">
+          Lógica encontra sensibilidade.
+        </span>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="availability">
+          <span aria-hidden="true"></span>
+          Aberta a oportunidades em Front-end
+        </p>
+
+        <p>
+          Luiz Antônio, SP
+          <span class="divider" aria-hidden="true">/</span>
+          Disponível para trabalho remoto e meio período
+        </p>
+      </div>
+    </section>
+
+    <div class="content-layout wrap">
+      <!-- Sobre -->
+      <aside
+        id="sobreMim"
+        class="about"
+        aria-labelledby="about-title"
+      >
+        <p class="eyebrow section-label">
+          <span>01</span> Sobre mim
+        </p>
+
+        <h2 id="about-title">
+          Prazer, <em>Ana.</em>
+        </h2>
+
+        <p>
+          Sou desenvolvedora Front-end, formada em Ciência da
+          Computação e com mais de 4 anos de experiência em
+          produtos digitais web e mobile.
+        </p>
+
+        <p>
+          Minha trajetória passa por Angular, React e
+          desenvolvimento Full Stack. Gosto de aproximar a
+          lógica do código do cuidado com cada detalhe da interface.
+        </p>
+
+        <p>
+          Organização, curiosidade e um olhar atento à usabilidade
+          fazem parte do meu jeito de trabalhar.
+        </p>
+
+        <div class="about-note">
+          <span class="note-symbol" aria-hidden="true">{ }</span>
+
+          <p>
+            Da ideia ao detalhe.<br>
+            <strong>Com intenção em cada etapa.</strong>
+          </p>
+        </div>
+
+        <div class="social-links" aria-label="Redes profissionais">
+          <a
+            href="https://www.linkedin.com/in/anaberigo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+            <span class="sr-only"> (abre em nova aba)</span>
+          </a>
+
+          <a
+            href="https://github.com/AnaBerigo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+            <span class="sr-only"> (abre em nova aba)</span>
+          </a>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <!-- Projetos -->
+        <section
+          id="projetos"
+          class="content-section projects"
+          aria-labelledby="projects-title"
+        >
+          <div class="section-heading">
+            <p class="eyebrow section-label">
+              <span>02</span> Projetos selecionados
+            </p>
+
+            <h2 id="projects-title">
+              Ideias que ganharam <em>forma.</em>
+            </h2>
+
+            <p>
+              Uma seleção de projetos pessoais e acadêmicos,
+              do primeiro conceito à interface.
+            </p>
+          </div>
+
+          <article class="project-card project-featured">
+            <div class="project-image unafritas-image">
+              <span class="project-type">WEB · LANDING PAGE</span>
+
+              <img
+                src="src/assets/images/img-projeto-unaFritas.png"
+                alt="Interface da UnaFritas, com cardápio e apresentação da marca"
+                width="748"
+                height="872"
+                loading="lazy"
+              >
+
+              <span class="project-index" aria-hidden="true">
+                01 / 03
+              </span>
             </div>
-            <div id="banner">
-                <img src="./src/assets/images//imagem-berigo1.svg" alt=" Imagem de Ana Berigo com fundo roxo e rosa" id="banner_img">
+
+            <div class="project-copy">
+              <p class="project-category">
+                Marca & experiência digital
+              </p>
+
+              <h3>UnaFritas</h3>
+
+              <p>
+                Uma presença digital para uma marca de batatas
+                no cone, desenvolvida para a Feira Gastronômica
+                da UNAERP.
+              </p>
+
+              <ul class="tags" aria-label="Tecnologias da UnaFritas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="project-actions">
+                <button
+                  type="button"
+                  class="text-button project-open"
+                  data-project="unafritas"
+                  hidden
+                >
+                  Sobre o projeto
+                  <span aria-hidden="true">+</span>
+                </button>
+
+                <a
+                  href="https://anaberigo.github.io/unaFritas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visitar site
+                  <span class="sr-only">
+                    da UnaFritas (abre em nova aba)
+                  </span>
+                </a>
+              </div>
             </div>
+          </article>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-image advocacia-image">
+                <span class="project-type">
+                  WEB · INSTITUCIONAL
+                </span>
+
+                <img
+                  src="src/assets/images/img-projeto-BerigoAdvocacia.png"
+                  alt="Interface do projeto Berigo Advocacia em tons escuros e dourados"
+                  width="758"
+                  height="975"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-copy">
+                <p class="project-status">Em desenvolvimento</p>
+
+                <h3>Berigo Advocacia</h3>
+
+                <p>
+                  Estudo de uma presença institucional, com
+                  componentes reutilizáveis e layout responsivo
+                  em Angular.
+                </p>
+
+                <ul
+                  class="tags"
+                  aria-label="Tecnologias do Berigo Advocacia"
+                >
+                  <li>Angular</li>
+                  <li>TypeScript</li>
+                  <li>SCSS</li>
+                </ul>
+
+                <button
+                  type="button"
+                  class="text-button project-open"
+                  data-project="advocacia"
+                  hidden
+                >
+                  Sobre o projeto
+                  <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image cooking-image">
+                <span class="project-type">
+                  MOBILE · APLICATIVO
+                </span>
+
+                <img
+                  src="src/assets/images/img-projeto-cookingHome.png"
+                  alt="Telas do CookingHome, com perfil e receitas organizadas por ingredientes"
+                  width="619"
+                  height="673"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-copy">
+                <p class="project-status">Em manutenção</p>
+
+                <h3>CookingHome</h3>
+
+                <p>
+                  Receitas a partir dos ingredientes que você tem.
+                  Aplicativo desenvolvido no meu TCC de Ciência
+                  da Computação.
+                </p>
+
+                <ul
+                  class="tags"
+                  aria-label="Tecnologias do CookingHome"
+                >
+                  <li>React Native</li>
+                  <li>Firebase</li>
+                </ul>
+
+                <button
+                  type="button"
+                  class="text-button project-open"
+                  data-project="cookinghome"
+                  hidden
+                >
+                  Sobre o projeto
+                  <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <p class="projects-footnote">
+            Mais código e experimentos no
+            <a
+              href="https://github.com/AnaBerigo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              meu GitHub<span class="sr-only">
+                (abre em nova aba)
+              </span>
+            </a>.
+          </p>
         </section>
 
-        <section id="sobreMim">
-            <div class="container">
-                <div class="title-section">
-                    <p class="nome-sessao">Sobre mim</p>
-                    <h2 class="titulo-sessao">Quem está por trás das interfaces que você vê.</h2>
-                </div>
-                <p class="description">
-                    Olá! Eu sou a Ana Paula Berigo, desenvolvedora Front-End formada em Ciência da Computação pela UNIFOR-MG. Minha trajetória é marcada por um profundo interesse em criar experiências digitais que unam estética, funcionalidade e acessibilidade.
-                </p>
-                <p class="description">
-                    Tenho experiência prática com tecnologias como HTML, CSS, JavaScript, React e Angular, além de já ter atuado com desenvolvimento mobile utilizando React Native e Flutter. Gosto de desenvolver interfaces funcionais, leves e visualmente agradáveis, com preferência por um estilo mais minimalista e com referências geométricas sutis que transmitam organização e clareza.
-                </p>
-                <p class="description">
-                    Sou uma pessoa organizada, comunicativa e curiosa por natureza. Estou constantemente buscando evoluir, aprendendo novas tecnologias, boas práticas de desenvolvimento e explorando o universo do UX/UI, com atenção especial à acessibilidade e usabilidade. Acredito que o design de uma interface vai muito além do visual: ele impacta diretamente na forma como as pessoas se conectam com produtos e serviços digitais.
-                </p>
-                <p class="description">
-                    Vejo o desenvolvimento como uma ferramenta de transformação e é isso que me move todos os dias: usar a tecnologia para facilitar a vida das pessoas, tornar processos mais intuitivos e entregar soluções com propósito. Em cada projeto, busco unir excelência técnica com empatia, criando aplicações que realmente façam sentido para quem as utiliza.
-                </p>
-            </div>
+        <!-- Experiência -->
+        <section
+          id="experiencia"
+          class="content-section experience"
+          aria-labelledby="experience-title"
+        >
+          <div class="section-heading">
+            <p class="eyebrow section-label">
+              <span>03</span> Experiência
+            </p>
+
+            <h2 id="experience-title">
+              Código em contextos <em>reais.</em>
+            </h2>
+          </div>
+
+          <div class="timeline">
+            <article class="experience-item">
+              <div class="experience-top">
+                <h3>Aditek</h3>
+                <p class="date">Set 2023 — Set 2026</p>
+              </div>
+
+              <h4>
+                Analista de Desenvolvimento de Sistemas Júnior
+              </h4>
+
+              <p>
+                Desenvolvimento e manutenção do DDO/iOrthoPay,
+                plataforma para profissionais da área odontológica.
+              </p>
+
+              <ul class="experience-points">
+                <li>
+                  Implementação dos módulos de Cursos e Feedback.
+                </li>
+                <li>
+                  Interfaces responsivas, componentes reutilizáveis,
+                  rotas e internacionalização em Angular.
+                </li>
+                <li>
+                  Integração com Hasura/GraphQL e serviços em NestJS.
+                </li>
+              </ul>
+
+              <ul
+                class="tags"
+                aria-label="Tecnologias utilizadas na Aditek"
+              >
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>GraphQL</li>
+                <li>NestJS</li>
+              </ul>
+            </article>
+
+            <article class="experience-item">
+              <div class="experience-top">
+                <h3>SS Telemática</h3>
+                <p class="date">Jan 2022 — Set 2023</p>
+              </div>
+
+              <h4>Desenvolvedora Full Stack Júnior</h4>
+
+              <p>
+                Aplicações web e mobile voltadas à telemetria
+                e à gestão de frotas.
+              </p>
+
+              <ul class="experience-points">
+                <li>
+                  Criação de uma aplicação React para acompanhar
+                  linhas, itinerários e veículos em mapa,
+                  em tempo real.
+                </li>
+                <li>
+                  Fluxo de avaliação de motoristas no app
+                  Minhas Viagens SS, com testes de reflexo
+                  e relatórios em PDF.
+                </li>
+                <li>
+                  Dashboards, alertas e integrações com Node.js.
+                </li>
+              </ul>
+
+              <ul
+                class="tags"
+                aria-label="Tecnologias utilizadas na SS Telemática"
+              >
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>Flutter</li>
+                <li>Node.js</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
-        <section id="habilidadesStack">
-            <div class="container">
-                <div class="title-section">
-                    <p class="nome-sessao">Habilidades / Stack</p>
-                    <h2 class="titulo-sessao">O que sei usar para construir soluções</h2>
-                </div>
-                <p class="description">
-                    Minha stack é composta por tecnologias modernas e eficientes, que me permitem desenvolver aplicações web e mobile de alta qualidade.
-                </p>
+        <!-- Formação -->
+        <section
+          id="formacao"
+          class="content-section education"
+          aria-labelledby="education-title"
+        >
+          <div class="section-heading">
+            <p class="eyebrow section-label">
+              <span>04</span> Formação & aprendizado
+            </p>
 
-                <div class="buttons-info">
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener" aria-label="Abrir site do HTML">
-                        <i class="fa-brands fa-html5"></i>
-                        <p>HTML5</p>
-                    </a>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener" aria-label="Abrir site do CSS">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <p>CSS3</p>
-                    </a>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener" aria-label="Abrir site do JavaScript">
-                        <i class="fa-brands fa-js"></i>
-                        <p>JavaScript</p>
-                    </a>
-                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener" aria-label="Abrir site do TypeScript">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="47" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M462 0H50C22.39 0 0 22.39 0 50v412c0 27.61 22.39 50 50 50h412c27.61 0 50-22.39 50-50V50c0-27.61-22.39-50-50-50zM297 284.08h-64.22V467h-50.87V284.08H118V243h179v41.08zm165.88 150.49c-9.958 17.82-28.27 27.843-47.74 31.99-22.61 4.816-46.651 4.556-69.33.31-11.11-2.08-20.73-5.21-28.87-9.38v-50.07c9.08 7.62 18.94 13.33 29.58 17.13 10.64 3.81 21.39 5.71 32.241 5.71 9.602 0 20.289-1.184 28.559-6.49 5.673-3.621 9.469-9.333 9.47-16.188.001-9.325-6.745-16.372-14.01-21.271-10.64-7.175-22.874-11.833-34.66-16.74-17.53-7.3-30.6-16.22-39.21-26.75-14.981-18.322-17.434-47.602-5.87-68.29 9.869-17.655 28.07-28.085 47.27-32.7 20.937-5.033 43.645-5.038 64.87-1.72 9.02 1.41 17.34 3.57 24.96 6.49v46.78c-3.76-2.61-7.85-4.9-12.29-6.88-8.755-3.904-18.204-6.544-27.7-7.83-9.499-1.27-19.489-1.491-28.871.71-7.39 1.714-15.153 5.131-19.409 11.73-1.77 2.77-2.66 5.87-2.66 9.31 0 3.75.99 7.119 2.969 10.089 5.022 7.534 13.835 12.384 21.761 16.271 13.902 6.818 28.492 11.951 41.86 19.87 12.964 7.652 24.492 18.33 30.13 32.54 2.71 6.83 4.07 14.78 4.07 23.85 0 12.519-2.37 23.029-7.12 31.529z" fill="#6a00ff" opacity="1" data-original="#000000" class=""></path></g></svg>
-                        <p>TypeScript</p>
-                    </a>
-                    <a href="https://react.dev/" target="_blank" rel="noopener" aria-label="Abrir site do React">
-                        <i class="fa-brands fa-react"></i>
-                        <p>React</p>
-                    </a>
-                    <a href="https://reactnative.dev/" target="_blank" rel="noopener" aria-label="Abrir site do React Native">
-                        <i class="fa-brands fa-react"></i>
-                        <p>React Native</p>
-                    </a>
-                    <a href="https://angular.dev/" target="_blank" rel="noopener" aria-label="Abrir site do Angular">
-                        <i class="fa-brands fa-angular"></i>
-                        <p>Angular</p>
-                    </a>
-                    <a href="https://styled-components.com/" target="_blank" rel="noopener" aria-label="Abrir site do Styled Components">
-                        <svg fill="#6a00ff" width="180px" height="180px" viewBox="0 0 24.00 24.00" role="img" xmlns="http://www.w3.org/2000/svg" stroke="#6a00ff" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"><title>styled-components icon</title><path d="M16.214 6.762l-.075.391c-.116.741-.074.953.244 1.228l.307.254-.318 1.418c-.19.846-.423 1.555-.571 1.788-.127.201-.275.497-.307.656-.053.19-.233.381-.508.55-.243.138-.72.508-1.058.805-.27.243-.456.392-.557.456l-.33.261c-.106.17-.166.307-.189.411-.023.107-.01.178.024.23.033.05.09.085.168.107a.954.954 0 00.282.023 3 3 0 00.632-.112c.07-.019.125-.037.173-.053.074-.091.245-.263.548-.562.804-.793 1.111-1.227.794-1.11-.117.042-.064-.064.137-.276.424-.413.667-1.037 1.175-2.994.402-1.545.402-1.567.698-1.567.139 0 .532.024.532.024V6.762h-.902zm3.839 3.165c-.064 0-.17.096-.233.202-.116.19.021.306 1.767 1.396 1.037.657 1.873 1.217 1.852 1.26-.021.031-.868.582-1.883 1.217-1.842 1.142-1.852 1.153-1.683 1.386.212.275 0 .37 2.391-1.122L24 13.155v-.836l-1.937-1.196c-1.047-.656-1.957-1.185-2.01-1.196zm-16.085.117c-.053 0-.963.54-2.01 1.185L0 12.425v.836l1.947 1.217c1.08.666 1.99 1.217 2.032 1.217.042 0 .127-.096.212-.212.127-.201.02-.286-1.768-1.418C.72 12.996.54 12.848.71 12.732c.106-.074.91-.572 1.778-1.111 1.979-1.217 1.873-1.133 1.714-1.387-.063-.105-.17-.2-.233-.19zm8.684.023c-.292-.002-.92.443-2.8 1.978-.081.193-.088.326-.051.412.024.059.068.1.129.13.06.03.138.048.224.055.171.015.373-.012.536-.044l.11-.025a.386.386 0 01.144-.118c.116-.064.603-.508 1.09-.984.857-.868 1.058-1.26.709-1.387a.24.24 0 00-.09-.017zm2.196.603c-.257.007-.72.305-1.513.938-.398.323-.65.497-.785.533l-.524.414c-.197.36-.226.583-.174.706a.25.25 0 00.138.134.644.644 0 00.24.045 2.18 2.18 0 00.58-.085 3.466 3.466 0 00.291-.092l.029-.012.053-.028c.1-.129.33-.372.618-.652.91-.878 1.375-1.502 1.28-1.735-.043-.113-.117-.17-.233-.166zm-2.424 1.08c-.074.008-.24.136-.539.398-.432.382-.903.602-1.066.504a3.97 3.97 0 01-.114.024c-.166.033-.373.06-.558.045a.708.708 0 01-.252-.063.337.337 0 01-.168-.17c-.037-.09-.037-.202.005-.345l-.65.534-1.471 1.217V15.867l4.82-3.797a.41.41 0 01.016-.123c.037-.134.035-.202-.023-.196zm2.074.639c-.073 0-.195.103-.39.31-.265.283-.682.557-.903.613l-.034.018a2.191 2.191 0 01-.11.042c-.06.02-.138.044-.228.068-.18.049-.404.094-.604.089a.732.732 0 01-.275-.054.344.344 0 01-.184-.18c-.058-.139-.035-.334.092-.611L7.61 16.033v1.205h1.868l3.962-3.112c.103-.114.258-.27.467-.465.56-.519.687-.698.687-.963 0-.206-.023-.31-.096-.31zm.943 1.95l-.339.338c-.19.18-.529.402-.761.497l-.046.02-.003.005-.01.01c-.009.007-.013.008-.02.011a3.432 3.432 0 01-.282.093 3.058 3.058 0 01-.65.115 1.035 1.035 0 01-.31-.027.364.364 0 01-.218-.144c-.048-.074-.062-.173-.035-.295a1.11 1.11 0 01.095-.25l-3.197 2.526h4.252l.508-.582c.698-.814 1.016-1.396 1.016-1.894z"></path></g></svg>
-                        <p>Styled Components</p>
-                    </a>
-                    <a href="https://git-scm.com/" target="_blank" rel="noopener" aria-label="Abrir site do Git">
-                        <i class="fa-brands fa-git-alt"></i>
-                        <p>Git</p>
-                    </a>
-                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Abrir site do GitHub">
-                        <i class="fa-brands fa-github"></i>
-                        <p>GitHub</p>
-                    </a>
-                    <a href="https://www.npmjs.com/" target="_blank" rel="noopener" aria-label="Abrir site do NPM">
-                        <i class="fa-brands fa-npm"></i>
-                        <p>NPM</p>
-                    </a>
-                    <a href="https://sass-lang.com/" target="_blank" rel="noopener" aria-label="Abrir site do Sass">
-                        <i class="fa-brands fa-sass"></i>
-                        <p>Sass</p>
-                    </a>
-                    <a href="https://www.figma.com/pt-br/" target="_blank" rel="noopener" aria-label="Abrir site do Figma">
-                        <i class="fa-brands fa-figma"></i>
-                        <p>Figma</p>
-                    </a>
-                    <a href="https://www.mysql.com/" target="_blank" rel="noopener" aria-label="Abrir site do MySQL">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g fill="#00758f" fill-rule="evenodd" clip-rule="evenodd"><path d="M116.411 90.81c-5.907 0-10.071.709-14.277 1.748v.701h.683c2.812 5.559 7.687 9.413 11.146 14.285 2.805 5.573 5.239 11.124 8.021 16.697.349-.338.683-.701.683-.701 4.905-3.466 7.339-9.039 7.339-17.41-2.1-2.449-2.435-4.868-4.185-7.313-2.086-3.476-6.62-5.217-9.41-8.007" fill="#6a00ff" opacity="1" data-original="#00758f" class=""></path><path d="M471.608 393.435c-27.872-.698-49.452 2.085-67.559 9.751-5.225 2.086-13.566 2.086-14.285 8.705 2.804 2.783 3.138 7.302 5.595 11.153 4.171 6.961 11.466 16.348 18.099 21.239 7.31 5.573 14.627 11.124 22.299 16 13.566 8.392 28.897 13.245 42.107 21.609 7.687 4.868 15.324 11.131 23.012 16.369 3.815 2.784 6.234 7.317 11.124 9.039v-1.053c-2.449-3.124-3.139-7.651-5.559-11.153-3.481-3.459-6.968-6.612-10.456-10.078-10.107-13.58-22.655-25.409-36.206-35.16-11.153-7.68-35.545-18.129-40.05-30.975 0 0-.363-.37-.705-.712 7.658-.705 16.733-3.495 24.036-5.609 11.821-3.124 22.619-2.42 34.804-5.544 5.58-1.403 11.153-3.154 16.748-4.868v-3.153c-6.3-6.257-10.805-14.627-17.424-20.541-17.744-15.317-37.267-30.277-57.46-42.833-10.812-6.968-24.741-11.473-36.235-17.41-4.156-2.092-11.117-3.124-13.565-6.626-6.271-7.658-9.765-17.744-14.285-26.811-10.085-19.132-19.858-40.363-28.548-60.595-6.263-13.573-10.1-27.142-17.758-39.686-35.886-59.211-74.876-95.058-134.77-130.236-12.89-7.328-28.206-10.456-44.562-14.285-8.719-.367-17.417-1.042-26.122-1.384-5.58-2.449-11.161-9.071-16.029-12.203C67.998 13.853 16.83-13.304 2.196 22.557c-9.402 22.648 13.929 44.926 21.943 56.42 5.915 8 13.588 17.068 17.744 26.11 2.441 5.922 3.139 12.199 5.588 18.459 5.565 15.32 10.783 32.389 18.107 46.674 3.822 7.313 7.992 14.986 12.868 21.569 2.812 3.855 7.673 5.573 8.719 11.862-4.861 6.953-5.239 17.401-8.021 26.113-12.527 39.353-7.658 88.104 10.107 117.001 5.559 8.704 18.805 27.865 36.57 20.534 15.665-6.256 12.185-26.107 16.712-43.509 1.039-4.207.341-6.968 2.426-9.75v.705c4.868 9.736 9.758 19.117 14.285 28.897 10.805 17.046 29.595 34.811 45.282 46.641 8.334 6.292 14.953 17.067 25.401 20.911v-1.053h-.69c-2.093-3.124-5.217-4.527-8.007-6.954-6.271-6.27-13.217-13.936-18.114-20.897-14.619-19.494-27.523-41.096-38.989-63.381-5.588-10.819-10.448-22.648-14.983-33.439-2.085-4.156-2.085-10.445-5.573-12.527-5.239 7.652-12.876 14.278-16.704 23.652-6.62 14.989-7.309 33.445-9.765 52.606-1.388.363-.691 0-1.388.69-11.132-2.783-14.961-14.27-19.154-23.992-10.441-24.755-12.199-64.453-3.132-93.008 2.427-7.298 12.905-30.281 8.705-37.245-2.1-6.645-9.061-10.437-12.883-15.684-4.519-6.616-9.424-14.957-12.527-22.285-8.363-19.495-12.562-41.093-21.587-60.588-4.185-9.068-11.509-18.474-17.41-26.815-6.634-9.406-13.936-16.018-19.168-27.149-1.729-3.841-4.17-10.111-1.395-14.278.691-2.79 2.101-3.84 4.891-4.544 4.504-3.826 17.402 1.039 21.922 3.131 12.89 5.206 23.687 10.111 34.47 17.409 4.882 3.492 10.107 10.103 16.363 11.862h7.324c11.138 2.416 23.687.675 34.142 3.821 18.441 5.915 35.153 14.623 50.135 24.025 45.601 28.908 83.218 70.008 108.626 119.101 4.185 7.996 5.944 15.317 9.765 23.657 7.317 17.101 16.378 34.51 23.673 51.208 7.309 16.37 14.292 33.067 24.747 46.669 5.21 7.303 26.114 11.132 35.517 14.968 6.946 3.125 17.758 5.915 24.029 9.737 11.844 7.303 23.658 15.673 34.819 23.695 5.559 4.176 22.976 12.874 24.022 19.849" fill="#6a00ff" opacity="1" data-original="#00758f" class=""></path></g></g></svg>
-                        <p>MySQL</p>
-                    </a>
-                    <a href="https://firebase.google.com/?hl=pt-br" target="_blank" rel="noopener" aria-label="Abrir site do Firebase">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="73" height="91" viewBox="0 0 73 91" fill="none">
-                            <g clip-path="url(#clip0_130_2)">
-                                <path d="M22.5752 87.933C26.3634 89.4568 30.4722 90.3615 34.7873 90.5132C40.6261 90.717 46.1816 89.5089 51.1455 87.2147C45.1923 84.8757 39.8009 81.4554 35.1974 77.2024C32.2171 81.9798 27.805 85.7506 22.5752 87.933Z" fill="#B786FD"/>
-                                <path d="M35.1996 77.2049C24.6952 67.4909 18.3219 53.4295 18.8613 38.0059C18.8787 37.5063 18.906 37.0042 18.9359 36.5046C17.0542 36.0174 15.0905 35.7216 13.0697 35.6495C10.1764 35.5476 7.37501 35.908 4.73026 36.6512C1.92643 41.5629 0.233686 47.1979 0.0224039 53.2356C-0.521958 68.8158 8.90619 82.4273 22.5749 87.9331C27.8047 85.7532 32.2168 81.9849 35.1996 77.2049Z" fill="#C9A5FC"/>
-                                <path d="M35.1998 77.2047C37.6433 73.2973 39.1222 68.7137 39.2962 63.7772C39.7486 50.792 31.019 39.6214 18.9361 36.5044C18.9063 37.004 18.8789 37.5061 18.8615 38.0057C18.3246 53.4268 24.6954 67.4883 35.1998 77.2047Z" fill="#B786FD"/>
-                                <path d="M37.9435 0C31.0632 5.51321 25.6271 12.7813 22.341 21.1555C20.4594 25.9529 19.2762 31.1032 18.9307 36.5045C31.0135 39.6216 39.7432 50.7922 39.2883 63.7798C39.1168 68.7163 37.6304 73.2949 35.1919 77.2074C39.7929 81.4653 45.1868 84.8806 51.14 87.2196C63.0911 81.6965 71.5697 69.81 72.0594 55.7511C72.3775 46.6411 68.8777 38.5229 63.9337 31.6699C58.7113 24.4242 37.9435 0 37.9435 0Z" fill="#6A00FF"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_130_2">
-                                <rect width="73" height="91" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <p>Firebase</p>
-                    </a>
-                    <a href="https://www.postman.com/" target="_blank" rel="noopener" aria-label="Abrir site do Postman">
-                        <svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M254.953118,144.253071 C263.911504,74.1217108 214.38443,10.0052669 144.381048,1.04688158 C74.3776647,-7.9115038 10.0052669,41.6155696 1.04688158,111.618952 C-7.9115038,181.622335 41.6155696,245.866756 111.618952,254.953118 C181.750312,263.911504 245.866756,214.38443 254.953118,144.253071 Z" fill="#6a00ff"> </path> <g transform="translate(50.181225, 45.198924)"> <path d="M124.018448,36.9853339 L70.012182,90.9916 L54.7829269,75.7623449 C107.893354,22.6519173 113.140409,27.2590869 124.018448,36.9853339 L124.018448,36.9853339 Z" fill="#FFFFFF"> </path> <path d="M70.012182,92.2713693 C69.6282512,92.2713693 69.3722974,92.1433924 69.1163435,91.8874385 L53.7591114,76.6581834 C53.2472037,76.1462757 53.2472037,75.3784141 53.7591114,74.8665063 C107.765378,20.8602402 113.396363,25.9793176 124.78631,36.2174723 C125.042264,36.4734262 125.170241,36.72938 125.170241,37.1133108 C125.170241,37.4972416 125.042264,37.7531955 124.78631,38.0091494 L70.7800436,91.8874385 C70.6520667,92.1433924 70.2681359,92.2713693 70.012182,92.2713693 Z M56.574604,75.7623449 L70.012182,89.1999229 L122.098794,37.1133108 C112.628501,28.6668332 106.229654,26.1072945 56.574604,75.7623449 L56.574604,75.7623449 Z" fill="#6a00ff"> </path> <path d="M85.497391,106.476809 L70.7800436,91.7594616 L124.78631,37.7531955 C139.247703,52.342566 117.619601,76.0182987 85.497391,106.476809 Z" fill="#FFFFFF"> </path> <path d="M85.497391,107.756578 C85.1134602,107.756578 84.8575064,107.628601 84.6015525,107.372648 L69.8842051,92.6553001 C69.6282512,92.3993463 69.6282512,92.1433924 69.6282512,91.7594616 C69.6282512,91.3755308 69.7562282,91.1195769 70.012182,90.8636231 L124.018448,36.857357 C124.530356,36.3454492 125.298217,36.3454492 125.810125,36.857357 C129.137525,39.9288034 130.929203,44.2800191 130.801226,48.7592118 C130.545272,62.9646515 114.420178,81.0093992 86.5212065,107.372648 C86.1372757,107.628601 85.7533449,107.756578 85.497391,107.756578 L85.497391,107.756578 Z M72.5717207,91.7594616 C80.7622445,100.077962 84.2176217,103.405363 85.497391,104.685132 C106.997516,84.2088225 127.857756,63.2206053 127.985733,48.7592118 C128.11371,45.4318115 126.833941,42.1044113 124.658333,39.5448726 L72.5717207,91.7594616 Z" fill="#6a00ff"> </path> <path d="M55.0388808,76.1462757 L65.9169201,87.024315 C66.172874,87.2802689 66.172874,87.5362228 65.9169201,87.7921767 C65.7889432,87.9201536 65.7889432,87.9201536 65.6609663,87.9201536 L43.1370259,92.7832771 C41.9852335,92.911254 40.961418,92.1433924 40.7054642,90.9916 C40.5774872,90.3517153 40.8334411,89.7118307 41.2173719,89.3278999 L54.2710192,76.2742526 C54.526973,76.0182987 54.9109038,75.8903218 55.0388808,76.1462757 Z" fill="#FFFFFF"> </path> <path d="M42.7530951,94.0630464 C40.8334411,94.0630464 39.4256948,92.5273232 39.4256948,90.6076692 C39.4256948,89.7118307 39.8096256,88.8159921 40.4495103,88.1761075 L53.5031576,75.1224602 C54.2710192,74.4825755 55.2948346,74.4825755 56.0626962,75.1224602 L66.9407356,86.0004996 C67.7085972,86.6403842 67.7085972,87.7921767 66.9407356,88.5600383 C66.6847817,88.8159921 66.4288279,88.9439691 66.0448971,89.071946 L43.5209567,93.9350695 C43.2650028,93.9350695 43.009049,94.0630464 42.7530951,94.0630464 L42.7530951,94.0630464 Z M54.65495,77.5540219 L42.1132104,90.0957615 C41.8572566,90.3517153 41.7292796,90.7356461 41.9852335,91.1195769 C42.1132104,91.5035077 42.4971412,91.6314847 42.881072,91.5035077 L63.9972661,86.8963381 L54.65495,77.5540219 Z" fill="#6a00ff"> </path> <path d="M152.557304,7.03873136 C144.366781,-0.895838537 131.185156,-0.639884669 123.250587,7.67861603 C115.316017,15.9971167 115.57197,29.050764 123.890471,36.9853339 C130.673249,43.5121575 140.911403,44.6639499 148.97395,39.8008264 L134.38458,25.211456 L152.557304,7.03873136 Z" fill="#FFFFFF"> </path> <path d="M138.223888,44.0240653 C126.066079,44.0240653 116.211855,34.1698413 116.211855,22.0120326 C116.211855,9.85422391 126.066079,-1.81866161e-14 138.223888,-1.81866161e-14 C143.854873,-1.81866161e-14 149.357881,2.17560788 153.453143,6.14289283 C153.709097,6.39884669 153.837074,6.65480056 153.837074,7.03873136 C153.837074,7.42266217 153.709097,7.67861603 153.453143,7.9345699 L136.176257,25.211456 L149.741812,38.777011 C150.25372,39.2889187 150.25372,40.0567803 149.741812,40.568688 C149.613835,40.696665 149.613835,40.696665 149.485858,40.8246419 C146.158458,42.8722729 142.191173,44.0240653 138.223888,44.0240653 Z M138.223888,2.68751561 C127.473825,2.68751561 118.771394,11.3899471 118.899371,22.1400096 C118.899371,32.890072 127.601802,41.5925035 138.351865,41.4645266 C141.295334,41.4645266 144.238804,40.8246419 146.926319,39.4168956 L133.488741,26.1072945 C133.232787,25.8513406 133.10481,25.5953868 133.10481,25.211456 C133.10481,24.8275252 133.232787,24.5715713 133.488741,24.3156174 L150.63765,7.1667083 C147.182273,4.22323882 142.831057,2.68751561 138.223888,2.68751561 L138.223888,2.68751561 Z" fill="#6a00ff"> </path> <path d="M152.941235,7.42266217 L152.685281,7.1667083 L134.38458,25.211456 L148.845973,39.6728495 C150.25372,38.777011 151.661466,37.7531955 152.813258,36.6014031 C161.003782,28.5388563 161.003782,15.485209 152.941235,7.42266217 L152.941235,7.42266217 Z" fill="#FFFFFF"> </path> <path d="M148.97395,41.0805958 C148.590019,41.0805958 148.334066,40.9526188 148.078112,40.696665 L133.488741,26.1072945 C133.232787,25.8513406 133.10481,25.5953868 133.10481,25.211456 C133.10481,24.8275252 133.232787,24.5715713 133.488741,24.3156174 L151.661466,6.14289283 C152.173374,5.63098509 152.941235,5.63098509 153.453143,6.14289283 L153.837074,6.39884669 C162.411528,14.9733013 162.411528,28.7948101 153.965051,37.4972416 C152.685281,38.777011 151.277535,39.9288034 149.741812,40.8246419 C149.357881,40.9526188 149.101927,41.0805958 148.97395,41.0805958 L148.97395,41.0805958 Z M136.176257,25.211456 L149.101927,38.1371263 C150.125743,37.4972416 151.149558,36.6014031 151.91742,35.8335415 C159.212105,28.5388563 159.596036,16.6370014 152.557304,8.95838537 L136.176257,25.211456 Z" fill="#6a00ff"> </path> <path d="M126.194056,39.2889187 C123.12261,36.2174723 118.131509,36.2174723 115.060063,39.2889187 L66.8127587,87.5362228 L74.8753055,95.5987696 L125.938102,50.8068428 C129.265502,47.9913502 129.521456,43.0002498 126.705964,39.6728495 C126.45001,39.5448726 126.322033,39.4168956 126.194056,39.2889187 L126.194056,39.2889187 Z" fill="#FFFFFF"> </path> <path d="M74.7473286,96.878539 C74.3633978,96.878539 74.1074439,96.750562 73.85149,96.4946082 L65.7889432,88.4320613 C65.2770355,87.9201536 65.2770355,87.152292 65.7889432,86.6403842 L114.036247,38.3930802 C117.619601,34.809726 123.378563,34.809726 126.961918,38.3930802 C130.545272,41.9764343 130.545272,47.7353963 126.961918,51.3187505 C126.833941,51.4467274 126.705964,51.5747044 126.577987,51.7026813 L75.5151902,96.4946082 C75.3872133,96.750562 75.1312594,96.878539 74.7473286,96.878539 L74.7473286,96.878539 Z M68.6044358,87.5362228 L74.8753055,93.8070925 L125.042264,49.7830273 C127.857756,47.4794425 128.11371,43.2562037 125.810125,40.4407111 C123.50654,37.6252186 119.283302,37.3692647 116.467809,39.6728495 C116.339832,39.8008264 116.211855,39.9288034 115.955901,40.0567803 L68.6044358,87.5362228 Z" fill="#6a00ff"> </path> <path d="M29.8274248,142.438327 C29.3155171,142.694281 29.0595632,143.206189 29.1875401,143.718097 L31.363148,152.932436 C31.8750557,154.212205 31.1071941,155.747929 29.6994479,156.131859 C28.6756324,156.51579 27.52384,156.131859 26.8839553,155.363998 L12.8064926,141.414512 L58.7502118,95.4707927 L74.6193516,95.7267466 L85.3694141,106.476809 C82.8098754,108.652417 67.3246664,123.625718 29.8274248,142.438327 L29.8274248,142.438327 Z" fill="#FFFFFF"> </path> <path d="M28.8036093,157.411629 C27.7797938,157.411629 26.7559784,157.027698 26.1160937,156.259836 L12.1666079,142.31035 C11.910654,142.054397 11.7826771,141.798443 11.7826771,141.414512 C11.7826771,141.030581 11.910654,140.774627 12.1666079,140.518673 L58.1103272,94.5749541 C58.366281,94.3190003 58.7502118,94.1910233 59.0061657,94.1910233 L74.8753055,94.4469772 C75.2592363,94.4469772 75.5151902,94.5749541 75.7711441,94.830908 L86.5212065,105.58097 C86.7771604,105.836924 86.9051373,106.220855 86.9051373,106.604786 C86.9051373,106.988717 86.7771604,107.244671 86.3932296,107.500624 L85.497391,108.268486 C71.931836,120.170341 53.5031576,132.072196 30.5952864,143.462143 L32.7708943,152.548505 C33.1548251,154.212205 32.3869635,156.003882 30.8512403,156.899721 C30.0833787,157.283652 29.443494,157.411629 28.8036093,157.411629 Z M14.7261466,141.414512 L27.9077708,154.468159 C28.2917016,155.108044 29.0595632,155.363998 29.6994479,154.980067 C30.3393325,154.596136 30.5952864,153.828275 30.2113556,153.18839 L28.0357477,143.974051 C27.7797938,142.822258 28.2917016,141.798443 29.3155171,141.286535 C51.9674343,129.896588 70.2681359,118.12271 83.705714,106.476809 L74.2354208,97.0065159 L59.5180734,96.750562 L14.7261466,141.414512 Z" fill="#6a00ff"> </path> <path d="M1.9284532,152.420528 L12.9344695,141.414512 L29.3155171,157.795559 L3.20822254,156.003882 C2.05643013,155.875905 1.28856853,154.85209 1.41654546,153.700298 C1.41654546,153.18839 1.5445224,152.676482 1.9284532,152.420528 L1.9284532,152.420528 Z" fill="#FFFFFF"> </path> <path d="M29.3155171,158.947352 L3.0802456,157.155675 C1.16059159,157.027698 -0.119177745,155.363998 0.00879918845,153.444344 C0.136776122,152.676482 0.39272999,151.908621 1.03261466,151.396713 L12.038631,140.390696 C12.5505387,139.878789 13.3184003,139.878789 13.830308,140.390696 L30.2113556,156.771744 C30.5952864,157.155675 30.7232633,157.667583 30.4673095,158.17949 C30.2113556,158.691398 29.8274248,158.947352 29.3155171,158.947352 L29.3155171,158.947352 Z M12.9344695,143.206189 L2.82429173,153.316367 C2.44036093,153.572321 2.44036093,154.212205 2.82429173,154.468159 C2.95226867,154.596136 3.0802456,154.724113 3.33619947,154.724113 L25.9881168,156.259836 L12.9344695,143.206189 Z" fill="#6a00ff"> </path> <path d="M54.2710192,101.357732 C53.5031576,101.357732 52.9912498,100.717847 52.9912498,100.077962 C52.9912498,99.6940315 53.1192268,99.4380776 53.3751806,99.1821238 L65.7889432,86.7683612 C66.3008509,86.2564534 67.0687125,86.2564534 67.5806203,86.7683612 L75.6431671,94.830908 C76.0270979,95.2148388 76.1550749,95.5987696 76.0270979,96.1106774 C75.899121,96.4946082 75.5151902,96.878539 75.0032825,97.0065159 L54.526973,101.357732 C54.3989961,101.357732 54.2710192,101.357732 54.2710192,101.357732 L54.2710192,101.357732 Z M66.6847817,89.4558768 L58.2383041,97.9023544 L72.059813,94.9588849 L66.6847817,89.4558768 Z" fill="#6a00ff"> </path> <path d="M74.6193516,95.7267466 L60.5418889,98.798193 C59.5180734,99.0541468 58.494258,98.4142622 58.2383041,97.3904467 C58.1103272,96.750562 58.2383041,96.1106774 58.7502118,95.5987696 L66.5568048,87.7921767 L74.6193516,95.7267466 Z" fill="#FFFFFF"> </path> <path d="M60.2859351,100.077962 C58.494258,100.077962 57.0865117,98.670216 57.0865117,96.878539 C57.0865117,95.9827004 57.4704425,95.2148388 57.9823502,94.5749541 L65.7889432,86.7683612 C66.3008509,86.2564534 67.0687125,86.2564534 67.5806203,86.7683612 L75.6431671,94.830908 C76.0270979,95.2148388 76.1550749,95.5987696 76.0270979,96.1106774 C75.899121,96.4946082 75.5151902,96.878539 75.0032825,97.0065159 L60.9258197,100.077962 C60.6698659,100.077962 60.413912,100.077962 60.2859351,100.077962 L60.2859351,100.077962 Z M66.6847817,89.4558768 L59.7740273,96.3666312 C59.5180734,96.6225851 59.5180734,96.878539 59.6460504,97.1344928 C59.7740273,97.3904467 60.0299812,97.5184236 60.413912,97.5184236 L72.1877899,94.9588849 L66.6847817,89.4558768 Z" fill="#6a00ff"> </path> <path d="M153.069212,19.7084478 C152.813258,18.9405862 151.91742,18.5566554 151.149558,18.8126093 C150.381697,19.0685632 149.997766,19.9644017 150.25372,20.7322633 C150.25372,20.8602402 150.381697,20.9882172 150.381697,21.1161941 C151.149558,22.6519173 150.893604,24.5715713 149.869789,25.9793176 C149.357881,26.6192023 149.485858,27.5150408 149.997766,28.0269485 C150.63765,28.5388563 151.533489,28.4108793 152.045397,27.7709947 C153.965051,25.3394329 154.348981,22.2679865 153.069212,19.7084478 L153.069212,19.7084478 Z" fill="#6a00ff"> </path> </g> </g> </g></svg>
-                        <p>Postman</p>
-                    </a>
-                </div>
-            </div>
+            <h2 id="education-title">
+              Uma base sólida.<br>
+              Uma curiosidade <em>constante.</em>
+            </h2>
+          </div>
+
+          <div class="education-list">
+            <article>
+              <div>
+                <h3>Ciência da Computação</h3>
+                <p>Bacharelado · UNIFOR-MG</p>
+              </div>
+              <span class="date">2018 — 2021</span>
+            </article>
+
+            <article>
+              <div>
+                <h3>Técnico em Informática</h3>
+                <p>SENAI</p>
+              </div>
+              <span class="date">2016 — 2017</span>
+            </article>
+
+            <article>
+              <div>
+                <h3>Técnico em Redes de Computadores</h3>
+                <p>SENAC Minas</p>
+              </div>
+              <span class="date">2014 — 2015</span>
+            </article>
+          </div>
+
+          <div class="learning-note">
+            <p class="eyebrow">Aprendizado contínuo</p>
+
+            <p>
+              Formações em HTML, CSS, JavaScript, responsividade
+              e mobile-first na Alura, além de cursos de Figma
+              e criação de landing pages.
+            </p>
+          </div>
         </section>
 
-        <section id="projetos">
-            <div class="container">
-                <div class="title-section">
-                    <p class="nome-sessao">Projetos</p>
-                    <h2 class="titulo-sessao">Explorando soluções com criatividade e tecnologia.</h2>
-                </div>
-                <p class="descricao">
-                    Aqui estão alguns dos meus projetos mais recentes, onde busco unir estética, funcionalidade e acessibilidade para criar experiências digitais que realmente façam a diferença.
-                </p>
+        <!-- Habilidades -->
+        <section
+          id="habilidadesStack"
+          class="content-section skills"
+          aria-labelledby="skills-title"
+        >
+          <div class="section-heading">
+            <p class="eyebrow section-label">
+              <span>05</span> Habilidades & tecnologias
+            </p>
+
+            <h2 id="skills-title">
+              As ferramentas por trás<br>
+              de cada <em>entrega.</em>
+            </h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-group">
+              <span class="skill-number" aria-hidden="true">
+                /01
+              </span>
+
+              <h3>Front-end</h3>
+
+              <ul class="skill-list">
+                <li>Angular</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Sass</li>
+                <li>Styled Components</li>
+              </ul>
             </div>
 
-            <div class="container-cards">
-                <div class="card">
-                    <div class="image-card">
-                        <img src="./src/assets/images/img-projeto-unaFritas.png" alt="Imagem do site">
-                    </div>
-                    <div class="languages">
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener" aria-label="Abrir site do HTML">
-                            <i class="fa-brands fa-html5"></i>
-                            <p>HTML5</p>
-                        </a>
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener" aria-label="Abrir site do CSS">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <p>CSS3</p>
-                        </a>
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener" aria-label="Abrir site do JavaScript">
-                            <i class="fa-brands fa-js"></i>
-                            <p>JavaScript</p>
-                        </a>
-                    </div>
-                    <h2>Landing Page UnaFritas</h2>
-                    <p>
-                        Landing page do TCC da UNAERP para divulgar a UnaFritas, marca inspirada nas batatas no cone de Amsterdam, na Feira Gastronômica.
-                    </p>
+            <div class="skill-group">
+              <span class="skill-number" aria-hidden="true">
+                /02
+              </span>
 
-                    <div class="visitar">
-                        <a href="https://anaberigo.github.io/unaFritas/" target="_blank" rel="noopener" aria-label="Abrir site do projeto unaFritas">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            <p>Visitar</p>
-                        </a>
-                    </div>
-                </div>
+              <h3>Integrações & back-end</h3>
 
-                <div class="card desenv">
-                    <div class="image-card">
-                        <img src="./src/assets/images/img-projeto-BerigoAdvocacia.png" alt="Imagem do site">
-                    </div>
-                    <div class="languages">
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener" aria-label="Abrir site do HTML">
-                            <i class="fa-brands fa-html5"></i>
-                            <p>HTML5</p>
-                        </a>
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener" aria-label="Abrir site do CSS">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <p>CSS3</p>
-                        </a>
-                        <a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-3.html" target="_blank" rel="noopener" aria-label="Abrir site do TypeScript">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="47" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M462 0H50C22.39 0 0 22.39 0 50v412c0 27.61 22.39 50 50 50h412c27.61 0 50-22.39 50-50V50c0-27.61-22.39-50-50-50zM297 284.08h-64.22V467h-50.87V284.08H118V243h179v41.08zm165.88 150.49c-9.958 17.82-28.27 27.843-47.74 31.99-22.61 4.816-46.651 4.556-69.33.31-11.11-2.08-20.73-5.21-28.87-9.38v-50.07c9.08 7.62 18.94 13.33 29.58 17.13 10.64 3.81 21.39 5.71 32.241 5.71 9.602 0 20.289-1.184 28.559-6.49 5.673-3.621 9.469-9.333 9.47-16.188.001-9.325-6.745-16.372-14.01-21.271-10.64-7.175-22.874-11.833-34.66-16.74-17.53-7.3-30.6-16.22-39.21-26.75-14.981-18.322-17.434-47.602-5.87-68.29 9.869-17.655 28.07-28.085 47.27-32.7 20.937-5.033 43.645-5.038 64.87-1.72 9.02 1.41 17.34 3.57 24.96 6.49v46.78c-3.76-2.61-7.85-4.9-12.29-6.88-8.755-3.904-18.204-6.544-27.7-7.83-9.499-1.27-19.489-1.491-28.871.71-7.39 1.714-15.153 5.131-19.409 11.73-1.77 2.77-2.66 5.87-2.66 9.31 0 3.75.99 7.119 2.969 10.089 5.022 7.534 13.835 12.384 21.761 16.271 13.902 6.818 28.492 11.951 41.86 19.87 12.964 7.652 24.492 18.33 30.13 32.54 2.71 6.83 4.07 14.78 4.07 23.85 0 12.519-2.37 23.029-7.12 31.529z" fill="#6a00ff" opacity="1" data-original="#000000" class=""></path></g></svg>
-                            <p>TypeScript</p>
-                        </a>
-                        <a href="https://angular.dev/" target="_blank" rel="noopener" aria-label="Abrir site do Angular">
-                        <i class="fa-brands fa-angular"></i>
-                        <p>Angular</p>
-                    </a>
-                    </div>
-                    <h2>Landing Page Berigo Advocacia</h2>
-                    <p>
-                        Landing page institucional de advocacia (portfólio), desenvolvida em Angular para praticar componentização, responsividade e estilização com SCSS, simulando um site real de escritório para apresentação profissional no GitHub.
-                    </p>
-
-                    <div class="visitar">
-                        <a href="https://berigo-advocacia.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir site do projeto unaFritas">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            <p>Visitar</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card disable">
-                    <div class="image-card">
-                        <img src="./src/assets/images/img-projeto-cookingHome.png" alt="Imagem do aplicativo">
-                    </div>
-                    <div class="languages">
-                        <a href="https://reactnative.dev/" target="_blank" rel="noopener" aria-label="Abrir site do React Native">
-                            <i class="fa-brands fa-react"></i>
-                            <p>React Native</p>
-                        </a>
-                        <a href="https://firebase.google.com/?hl=pt-br" target="_blank" rel="noopener" aria-label="Abrir site do Firebase">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="73" height="91" viewBox="0 0 73 91" fill="none">
-                                <g clip-path="url(#clip0_130_2)">
-                                    <path d="M22.5752 87.933C26.3634 89.4568 30.4722 90.3615 34.7873 90.5132C40.6261 90.717 46.1816 89.5089 51.1455 87.2147C45.1923 84.8757 39.8009 81.4554 35.1974 77.2024C32.2171 81.9798 27.805 85.7506 22.5752 87.933Z" fill="#B786FD"/>
-                                    <path d="M35.1996 77.2049C24.6952 67.4909 18.3219 53.4295 18.8613 38.0059C18.8787 37.5063 18.906 37.0042 18.9359 36.5046C17.0542 36.0174 15.0905 35.7216 13.0697 35.6495C10.1764 35.5476 7.37501 35.908 4.73026 36.6512C1.92643 41.5629 0.233686 47.1979 0.0224039 53.2356C-0.521958 68.8158 8.90619 82.4273 22.5749 87.9331C27.8047 85.7532 32.2168 81.9849 35.1996 77.2049Z" fill="#C9A5FC"/>
-                                    <path d="M35.1998 77.2047C37.6433 73.2973 39.1222 68.7137 39.2962 63.7772C39.7486 50.792 31.019 39.6214 18.9361 36.5044C18.9063 37.004 18.8789 37.5061 18.8615 38.0057C18.3246 53.4268 24.6954 67.4883 35.1998 77.2047Z" fill="#B786FD"/>
-                                    <path d="M37.9435 0C31.0632 5.51321 25.6271 12.7813 22.341 21.1555C20.4594 25.9529 19.2762 31.1032 18.9307 36.5045C31.0135 39.6216 39.7432 50.7922 39.2883 63.7798C39.1168 68.7163 37.6304 73.2949 35.1919 77.2074C39.7929 81.4653 45.1868 84.8806 51.14 87.2196C63.0911 81.6965 71.5697 69.81 72.0594 55.7511C72.3775 46.6411 68.8777 38.5229 63.9337 31.6699C58.7113 24.4242 37.9435 0 37.9435 0Z" fill="#6A00FF"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_130_2">
-                                    <rect width="73" height="91" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <p>Firebase</p>
-                        </a>
-                    </div>
-                    <h2>Aplicativo Móvel CookingHome</h2>
-                    <p>
-                        Aplicativo em React Native desenvolvido para o meu TCC de Ciência da Computação. Permite visualizar, criar e filtrar receitas através de ingredientes.
-                    </p>
-
-                    <div class="visitar">
-                        <a href="https://una-fritas.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir site do projeto unaFritas">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            <p>Visitar</p>
-                        </a>
-                    </div>
-                </div>
+              <ul class="skill-list">
+                <li>APIs REST</li>
+                <li>GraphQL</li>
+                <li>Hasura</li>
+                <li>NestJS</li>
+                <li>Node.js</li>
+                <li>MySQL</li>
+              </ul>
             </div>
 
+            <div class="skill-group">
+              <span class="skill-number" aria-hidden="true">
+                /03
+              </span>
+
+              <h3>Mobile & design</h3>
+
+              <ul class="skill-list">
+                <li>Flutter</li>
+                <li>React Native</li>
+                <li>Figma</li>
+                <li>UX/UI</li>
+                <li>Responsividade</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <span class="skill-number" aria-hidden="true">
+                /04
+              </span>
+
+              <h3>Ferramentas & práticas</h3>
+
+              <ul class="skill-list">
+                <li>Git & GitHub</li>
+                <li>NPM</li>
+                <li>Metodologias ágeis</li>
+                <li>AWS</li>
+                <li>Azure</li>
+              </ul>
+            </div>
+          </div>
         </section>
-    </main>
-    <footer>
+      </div>
+    </div>
 
-    </footer>
-    <script src="src/scripts/script.js"></script>
+    <!-- Contato -->
+    <section
+      id="contato"
+      class="contact-section"
+      aria-labelledby="contact-title"
+    >
+      <div class="contact-inner wrap">
+        <div>
+          <p class="eyebrow section-label">
+            <span>06</span> Próximas possibilidades
+          </p>
+
+          <h2 id="contact-title">
+            Uma boa conversa.<br>
+            Um novo <em>começo.</em>
+          </h2>
+
+          <p>
+            Estou em busca de uma oportunidade em Front-end.<br>
+            Vamos conversar sobre o que podemos construir juntos?
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a
+            class="contact-email"
+            href="mailto:anaberigoo@gmail.com"
+          >
+            anaberigoo@gmail.com
+          </a>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/anaberigo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+              <span class="sr-only"> (abre em nova aba)</span>
+            </a>
+
+            <a
+              href="https://github.com/AnaBerigo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <span class="sr-only"> (abre em nova aba)</span>
+            </a>
+
+            <a
+              href="https://wa.me/5516981316789"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+              <span class="sr-only"> (abre em nova aba)</span>
+            </a>
+          </div>
+
+          <a
+            class="cv-link"
+            href="src/assets/files/Ana_Paula_Berigo_CV.pdf"
+            download="Ana_Paula_Berigo_CV.pdf"
+          >
+            Baixar meu currículo
+            <span class="file-format">PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a
+      class="wordmark"
+      href="#home"
+      aria-label="Ana Berigo, voltar ao início"
+    >
+      ana berigo<span aria-hidden="true">.</span>
+    </a>
+
+    <p>
+      © <span id="current-year">2026</span>
+      Ana Paula Berigo
+    </p>
+
+    <a class="back-top" href="#home">Voltar ao início</a>
+  </footer>
+
+  <!-- Detalhes dos projetos -->
+  <dialog
+    id="project-dialog"
+    class="project-dialog"
+    aria-labelledby="dialog-title"
+  >
+    <div class="dialog-top">
+      <span class="eyebrow">Por dentro do projeto</span>
+
+      <button
+        type="button"
+        class="dialog-close icon-button"
+        aria-label="Fechar detalhes do projeto"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+
+    <div class="dialog-body">
+      <p id="dialog-category" class="project-category"></p>
+      <h2 id="dialog-title" tabindex="-1"></h2>
+      <p id="dialog-description"></p>
+
+      <ul
+        id="dialog-tags"
+        class="tags"
+        aria-label="Tecnologias do projeto"
+      ></ul>
+
+      <div class="dialog-preview">
+        <img id="dialog-image" alt="">
+      </div>
+
+      <div class="dialog-details">
+        <div>
+          <h3>O contexto</h3>
+          <p id="dialog-context"></p>
+        </div>
+
+        <div>
+          <h3>O desenvolvimento</h3>
+          <p id="dialog-contribution"></p>
+        </div>
+      </div>
+
+      <p id="dialog-status" class="dialog-status"></p>
+
+      <a
+        id="dialog-link"
+        class="button button-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        hidden
+      >
+        Visitar site
+        <span class="sr-only"> (abre em nova aba)</span>
+      </a>
+    </div>
+  </dialog>
 </body>
 </html>
-

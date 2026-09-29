@@ -1,35 +1,80 @@
-#habilidadesStack {
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 38px;
+  row-gap: 36px;
+}
+
+.skill-group {
+  border-top: 1px solid var(--line);
+  padding-top: 19px;
+  position: relative;
+}
+
+.skill-number {
+  font-size: 0.625rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+}
+
+.skill-group h3 {
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 15px;
+}
+
+.skill-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 64.222px);
+  flex-wrap: wrap;
+  gap: 5px 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.8;
 }
 
-#habilidadesStack .container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+.skill-list li:not(:last-child)::after {
+  content: "/";
+  color: var(--line);
+  margin: 0 10px;
 }
 
-#habilidadesStack .container .buttons-info {
-  justify-content: center;
-  align-items: center;
-}
+@media (max-width: 900px) {
+  .skills-grid {
+    gap: 28px 25px;
+  }
 
-@media screen and (max-width: 815px) {
-  #habilidadesStack .container {
-    width: 100%;
+  .skill-group h3 {
+    font-size: 0.9375rem;
+  }
+
+  .skill-list {
+    font-size: 0.8125rem;
   }
 }
 
-@media screen and (max-width: 420px) {
-  #habilidadesStack .container {
-    gap: 20px;
-    width: 100%;
+@media (max-width: 760px) {
+  .skills-grid {
+    column-gap: 22px;
+    row-gap: 28px;
   }
-  #habilidadesStack .description {
-    font-size: 0.85rem;
+
+  .skill-group h3 {
+    font-size: 1rem;
+  }
+
+  .skill-list {
+    font-size: 0.875rem;
+  }
+
+  .skill-number {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

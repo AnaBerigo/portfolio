@@ -1,36 +1,140 @@
-#sobreMim {
+.content-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  column-gap: 100px;
+  align-items: start;
+  padding-top: 78px;
+}
+
+.about {
+  position: sticky;
+  top: 130px;
+  scroll-margin-top: 18px;
+}
+
+.about h2 {
+  font-size: 2.65rem;
+  margin-bottom: 25px;
+}
+
+.about > p:not(.eyebrow) {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 19px;
+}
+
+.about-note {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 64.222px);
+  gap: 16px;
+  padding-block: 24px 27px;
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
 }
 
-#sobreMim .container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  /* align-items: center; */
+.note-symbol {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--accent);
+  white-space: nowrap;
+  font-weight: 400;
 }
 
-#sobreMim .title-section {
-  display: flex;
-  flex-direction: column;
+.about-note p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-@media screen and (max-width: 815px) {
-  #sobreMim .container {
-    width: 100%;
+.about-note strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.about .social-links {
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 1600px) {
+  .content-layout {
+    grid-template-columns: 290px minmax(0, 1fr);
+    column-gap: 120px;
   }
 }
 
-@media screen and (max-width: 420px) {
-  #sobreMim .container {
-    gap: 20px;
-    width: 100%;
+@media (max-width: 1100px) {
+  .content-layout {
+    grid-template-columns: 235px minmax(0, 1fr);
+    gap: 55px;
+    padding-top: 62px;
   }
-  #sobreMim .description {
-    font-size: 0.85rem;
+
+  .about h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .about {
+    top: 115px;
+  }
+
+  .about > p:not(.eyebrow) {
+    font-size: 0.875rem;
+  }
+
+  .about-note {
+    gap: 12px;
+  }
+
+  .note-symbol {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-top: 44px;
+  }
+
+  .about {
+    position: static;
+    max-width: 580px;
+  }
+
+  .about h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+
+  .about > p:not(.eyebrow) {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .about-note {
+    margin-top: 24px;
+    padding-block: 21px;
+    gap: 17px;
+  }
+
+  .about-note p {
+    font-size: 0.8125rem;
+  }
+
+  .about .social-links {
+    font-size: 0.875rem;
+  }
+
+  .main-column {
+    min-width: 0;
   }
 }

@@ -1,80 +1,402 @@
-header {
-  width: 100%;
-  padding: 10px 3%;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
   z-index: 1000;
+
+  width: 100%;
+
+  background: var(--header);
+  border-bottom: 1px solid var(--line);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-#navbar {
-  width: 100%;
+.site-header .header-inner {
+  min-height: 86px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-#nav_logo {
-  width: 60px;
-}
+/* =========================================================
+   LOGO
+   ========================================================= */
 
-#nav_list {
-  display: flex;
-  list-style: none;
-  gap: 48px;
-}
+.site-header .wordmark {
+  margin-right: auto;
 
-.nav-item a {
+  color: var(--ink);
   text-decoration: none;
-  color: var(--cor-fonte);
+
+  font-size: 1.4rem;
+  font-weight: 650;
+  line-height: 1;
+
+  letter-spacing: -0.07em;
+
+  white-space: nowrap;
+}
+
+.site-header .wordmark span {
+  color: var(--accent);
+}
+
+/* =========================================================
+   NAVEGAÇÃO DESKTOP
+   ========================================================= */
+
+.site-header .main-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+.site-header .main-nav a {
+  position: relative;
+
+  color: var(--muted);
+  text-decoration: none;
+
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.site-header .main-nav a:hover,
+.site-header .main-nav a[aria-current="location"] {
+  color: var(--ink);
+}
+
+/* linha abaixo do link ativo */
+
+.site-header .main-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--accent);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.2s ease;
+}
+
+.site-header .main-nav a:hover::after,
+.site-header .main-nav a[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   AÇÕES DO HEADER
+   ========================================================= */
+
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: 40px;
+}
+
+/* =========================================================
+   BOTÃO DE TEMA
+   ========================================================= */
+
+.site-header .theme-toggle {
+  color: var(--ink);
+}
+
+/* tema claro */
+
+.site-header .theme-toggle .sun-icon {
+  display: none;
+}
+
+/* tema escuro */
+
+:root[data-theme="dark"] .site-header .theme-toggle .moon-icon {
+  display: none;
+}
+
+:root[data-theme="dark"] .site-header .theme-toggle .sun-icon {
+  display: block;
+}
+
+/* =========================================================
+   VAMOS CONVERSAR
+   ========================================================= */
+
+.site-header .header-contact {
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 17px;
+
+  color: var(--ink);
+  text-decoration: none;
+
+  font-size: 0.8125rem;
   font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  background: transparent;
+
+  border: 1px solid var(--line);
+  border-radius: 5px;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.nav-item.active a {
-  font-weight: 600;
-  border-bottom: 3px solid var(--roxo-principal);
+.site-header .header-contact:hover {
+  color: var(--accent-dark);
+
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
 
-#mobile_btn {
+/* =========================================================
+   BOTÃO HAMBURGUER
+   ========================================================= */
+
+/*
+  IMPORTANTE:
+
+  O style.css possui:
+
+  .icon-button {
+    display: grid;
+  }
+
+  e ele é carregado depois do header.css.
+
+  Por isso usamos um seletor mais específico aqui.
+  Assim o menu NÃO aparece no desktop.
+*/
+
+.site-header .menu-toggle.icon-button {
   display: none;
+
+  position: relative;
 }
 
-#mobile_menu {
-  display: none;
+/* barrinhas */
+
+.site-header .menu-toggle span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 18px;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: transform 0.2s ease;
 }
 
-@media screen and (max-width: 1170px) {
-  #nav_list {
+.site-header .menu-toggle span:first-child {
+  transform: translate(-50%, -4px);
+}
+
+.site-header .menu-toggle span:last-child {
+  transform: translate(-50%, 4px);
+}
+
+/* transforma as barrinhas em X */
+
+.site-header .menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.site-header .menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .site-header .main-nav {
+    gap: 24px;
+  }
+
+  .site-header .header-actions {
+    gap: 8px;
+    margin-left: 26px;
+  }
+
+  .site-header .header-contact {
+    padding-inline: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   O script.js já utiliza exatamente 760px.
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .site-header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /*
+    O header passa a ter duas linhas:
+
+    ana berigo.                 tema | menu
+    Sobre | Projetos | Experiência | Contato
+  */
+
+  .site-header .header-inner {
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    grid-template-areas:
+      "logo actions"
+      "nav nav";
+
+    align-items: center;
+
+    row-gap: 10px;
+
+    padding-top: 12px;
+  }
+
+  /* =======================================================
+     PRIMEIRA LINHA
+     ======================================================= */
+
+  .site-header .wordmark {
+    grid-area: logo;
+
+    margin-right: 0;
+
+    font-size: 1.0625rem;
+  }
+
+  .site-header .header-actions {
+    grid-area: actions;
+
+    gap: 4px;
+
+    margin-left: 0;
+  }
+
+  /*
+    "Vamos conversar" desaparece,
+    igual à referência.
+  */
+
+  .site-header .header-contact {
     display: none;
   }
 
-  #mobile_btn {
-    display: block;
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  /*
+    Só agora aparecem as barrinhas.
+  */
+
+  .site-header .menu-toggle.icon-button {
+    display: grid;
   }
 
-  #mobile_menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .site-header .theme-toggle,
+  .site-header .menu-toggle {
+    width: 40px;
+    height: 40px;
   }
 
-  #mobile_nav_list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 12px 0;
+  /* =======================================================
+     SEGUNDA LINHA - MENU
+     ======================================================= */
+
+  /*
+    Fechado por padrão.
+
+    Seu script.js adiciona automaticamente:
+    .is-open
+
+    quando clicar nas barrinhas.
+  */
+
+  .site-header .main-nav {
+    grid-area: nav;
+
+    display: none;
+
+    width: 100%;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 0;
+
+    padding: 8px 0 20px;
   }
 
-  #mobile_nav_list .nav-item {
-    list-style: none;
+  /*
+    Menu aberto.
+
+    Fica horizontal, como no print:
+    Sobre Projetos Experiência Contato
+  */
+
+  .site-header .main-nav.is-open {
+    display: grid;
+  }
+
+  .site-header .main-nav a {
+    padding: 7px 2px;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+    line-height: 1.2;
+
     text-align: center;
   }
 
-  header {
-    background-color: var(--cor-branco);
+  .site-header .main-nav a:hover,
+  .site-header .main-nav a[aria-current="location"] {
+    color: var(--ink);
+  }
+
+  /*
+    No mobile não mostra a barrinha
+    abaixo do link de navegação.
+  */
+
+  .site-header .main-nav a::after {
+    display: none;
   }
 }
