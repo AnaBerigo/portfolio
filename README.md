@@ -1,9 +1,9 @@
-# 💼 Portfólio Profissional – Ana Paula Berigo
+
+# 💼 Portfólio Profissional - Ana Paula Berigo
 
 Este projeto é um portfólio pessoal desenvolvido para apresentar minhas **habilidades**, **experiências** e **projetos** de forma organizada, visualmente agradável e profissional. Ideal para recrutadores, parceiros e colegas de área que queiram conhecer mais sobre meu trabalho.
 
-<img width="1928" height="1088" alt="Cover (3)" src="https://github.com/user-attachments/assets/de2ae5e6-8a18-4afa-8bc3-66e3ba6dd9e1" />
-
+<img width="1928" height="1088" alt="Cover" src="https://github.com/user-attachments/assets/37654508-58df-429f-9504-ca91b5a37e42" />
 
 ---
 
