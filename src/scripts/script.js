@@ -131,6 +131,31 @@ updateActiveLink();
 
 // Informações exibidas nos detalhes dos projetos.
 const projects = {
+  atelieberigo: {
+    name: "Ateliê Berigo",
+    category: "Web · Catálogo digital · Projeto pessoal",
+
+    description:
+      "Site da minha marca de amigurumis e velas artesanais, com identidade visual própria e catálogo das linhas Berigurumis e Berigulumus.",
+
+    technologies: ["Angular", "TypeScript", "HTML", "CSS"],
+
+    image: "src/assets/images/img-projeto-atelieBerigo.png",
+
+    alt: "Página inicial do Ateliê Berigo, com amigurumi e velas artesanais",
+
+    context:
+      "Criado para apresentar as peças do Ateliê Berigo, facilitar a descoberta dos produtos e orientar os clientes sobre personalizações e encomendas.",
+
+    contribution:
+      "Desenvolvimento em Angular e TypeScript, com componentes reutilizáveis, layout responsivo, navegação mobile, filtros por categoria e detalhes dos produtos. A interface traduz a identidade da marca em tons de terracota, marrom e off-white.",
+
+    status:
+      "Em desenvolvimento. O site está disponível para conhecer o estágio atual do projeto.",
+
+    url: "https://atelie-berigo.vercel.app/",
+  },
+
   unafritas: {
     name: "UnaFritas",
     category: "Web · Landing page · Projeto acadêmico",
